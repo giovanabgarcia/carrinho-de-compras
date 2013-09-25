@@ -1,3 +1,4 @@
+//Giovana e Rebeca
 package br.calebe.exemplos.ex01;
 
 import java.util.ArrayList;
@@ -26,5 +27,13 @@ public class Carrinho {
             }
         }
         return menor;
+    }
+    
+    public void remove(Produto produto) throws CarrinhoVazioExpected{
+        if (produtos.isEmpty()) {
+            throw new CarrinhoVazioExpected();
+        }
+        else
+           produtos.remove(produto);
     }
 }

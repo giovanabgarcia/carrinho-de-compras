@@ -1,3 +1,4 @@
+//Giovana e Rebeca
 package br.calebe.exemplos.ex01;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -47,5 +48,26 @@ public class CarrinhoTest {
         Produto copia = new Produto("Java em 24 horas", 50.00);
         original = carrinho.menorProduto();
         assertArrayEquals(new Object[]{original}, new Object[]{copia});
+    } 
+   
+    @Test
+    public void colocarNull() throws CarrinhoVazioExpected {
+        carrinho.add(null);
+    }
+    
+    @Test
+    public void addLivro() throws CarrinhoVazioExpected{
+        Produto livro = new Produto("Use a Cabeça Java", "Sierra,Kathy", "Alta Books", 129.90);
+        carrinho.add(livro);
+    }
+    
+    @Test
+    public void tirarUmProduto() throws CarrinhoVazioExpected {
+        Produto livro = new Produto("Java em 24 horas", 50.00);
+        carrinho.add(livro);
+        Produto menor;
+        menor = carrinho.menorProduto();
+        assertArrayEquals(new Object[]{livro}, new Object[]{menor});
+        carrinho.remove(livro);
     }
 }
