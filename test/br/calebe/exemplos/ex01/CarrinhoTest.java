@@ -69,12 +69,12 @@ public class CarrinhoTest {
     public void tirarUmProduto() throws CarrinhoVazioExpected {
         Produto livro = new Produto("Java em 24 horas", 50.00);
         carrinho.add1(livro);
-        Produto menor;
-        menor = carrinho.TamanhoList();
+        double antes;
+        antes = carrinho.TamanhoList();
         carrinho.remove(livro);
-        Produto depois;
+        double depois;
         depois = carrinho.TamanhoList();
-        Assert.assertEquals(menor,depois);
+        Assert.assertEquals(antes, depois);
     }
     
     @Test
