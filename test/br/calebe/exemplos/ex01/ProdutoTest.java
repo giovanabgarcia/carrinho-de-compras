@@ -1,7 +1,6 @@
 //Giovana e Rebeca
 package br.calebe.exemplos.ex01;
 
-import org.junit.Before;
 import org.junit.Test;
 
 public class ProdutoTest {
